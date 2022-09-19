@@ -3,7 +3,6 @@
 import face_recognition
 import cv2
 import numpy as np
-import pywhatkit
 import pafy
 
 # url of the video
@@ -146,7 +145,7 @@ while True:
             best_match_index = np.argmin(face_distances)
             if matches[best_match_index]:
                 name = known_face_names[best_match_index]
-                # pywhatkit.sendwhatmsg_to_group_instantly("KjdmxByr94u4966DodwKim", "Hey *{}*  was just seen!".format(name),tab_close=True)
+                
 
             face_names.append(name)
             if name in known_face_names:
